@@ -31,7 +31,7 @@ const PRODUCTS_PER_PAGE = 6;
 export default function HomePage() {
   const [searchValue, setSearchValue] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('Semua');
-  const { cart, addItem, removeItem, setCart, updateQuantity } = useCart();
+  const { cart, addItem, removeItem, setCart, updateQuantity, getTotalQuantity } = useCart();
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [removeDialogOpen, setRemoveDialogOpen] = useState(false);
   const [selectedRemoveItem, setSelectedRemoveItem] = useState<CartItem | null>(null);
